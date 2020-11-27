@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    #false表示不向服务端注册自己
+    register-with-eureka: true
+    #设置与eureka server 交互的地址,查询服务和注册服务都需要这个地址
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+#设置feign客户端超时时间
+### Ribbon 配置
+ribbon:
+  # 连接超时
+  ConnectTimeout: 2000
+  # 响应超时
+  ReadTimeout: 5000
